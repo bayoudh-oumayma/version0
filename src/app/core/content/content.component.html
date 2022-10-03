@@ -1,0 +1,39 @@
+
+    <div class="form-group">
+      <label for="exampleInputEmail1" >Email address</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="Qr.nom"  placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="Qr.phone" >
+    </div>
+  
+   
+        <div class="form-group">
+          
+          <input type="file" class="form-control-file" id="exampleFormControlFile1" [(ngModel)]="Qr.file">
+        </div>
+     
+    <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+    
+    <!-- iheb -->
+<!-- <div class="container" id="htmlData">
+  
+    <div class="container">
+      <h2 >QR code Generator</h2>
+    </div>
+    
+    
+    <ngx-qrcode 
+    [elementType]="elementType" 
+    [value] = "Qr"
+  
+    >
+    </ngx-qrcode> --> 
+    
+    
+        
+    <qrcode [qrdata]="'http://192.168.100.12:4200/content/affiche'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+   
